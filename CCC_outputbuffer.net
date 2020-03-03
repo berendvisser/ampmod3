@@ -1,0 +1,18 @@
+* C:\Users\User\Documents\Module 3\FINAL\ampmod3\CCC_outputbuffer.asc
+R1 c N002 1k
+R2 N002 0 1.63k
+C1 N002 N001 1000µ
+R3 e 0 80
+V1 N001 0 SINE(0 1 1000) AC 1
+V2 c 0 10
+Q1 c N003 e 0 MJE3055
+Q2 c N002 N003 0 BC550
+C2 N004 e 1000µ
+R4 N004 0 4
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\User\Documents\LTspiceXVII\lib\cmp\standard.bjt
+;ac dec 1000 5 50000
+.tran 0 0.001 0
+.backanno
+.end
