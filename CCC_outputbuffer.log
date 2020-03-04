@@ -1,21 +1,24 @@
 Circuit: * C:\Users\User\Documents\Module 3\FINAL\ampmod3\CCC_outputbuffer.asc
 
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by C1.
 Direct Newton iteration for .op point succeeded.
 
-Date: Tue Mar 03 14:33:38 2020
-Total elapsed time: 0.813 seconds.
+Date: Wed Mar 04 09:54:42 2020
+Total elapsed time: 0.264 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 192206
-traniter = 192196
-tranpoints = 63875
-accept = 41961
-rejected = 21914
-matrix size = 9
+totiter = 7770
+traniter = 7762
+tranpoints = 3882
+accept = 2418
+rejected = 1464
+matrix size = 10
 fillins = 0
 solver = Normal
-Matrix Compiler1: 528 bytes object code size  0.7/0.2/[0.1]
+Matrix Compiler1: 542 bytes object code size  0.7/0.3/[0.2]
 Matrix Compiler2: off  [0.2]/0.4/0.3
 
