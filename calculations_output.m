@@ -8,7 +8,10 @@ Rb1 = 500e3; %[ohm]
 Rb2 = 100e3; %[ohm]
 Re = 1e3; %[ohm]
 Ic =0.961e-3; %[A] large signal
-alpha =380; %[unitless]
+Afe1 =1; %[unitless]
+Afe2 = 1;
+Ro1 = 1;
+Ro2 = 1;
 
 
 %% Derived from large signal
@@ -19,6 +22,8 @@ Ib = Ic/alpha; %[A] large signal
 Ibiasresistors = Vcc/(Rb1 + Rb2); %[A] largesignal
 Ratio_Ib_Ibiasres = Ibiasresistors/Ib %[unitless]
 Rb1Rb2_par = (Rb1*Rb2)/(Rb1+Rb2); % [Ohm]
+Ro1Ro2_par = (Ro1*Ro2)/(Ro1+Ro2);
+Afe1Afe2_par = (Afe1*Afe2)/(Afe1+Afe2);
 
 
 %% derived small signal
@@ -29,8 +34,10 @@ v_in = 1; %[V]
 %% Revelent equations small signal
 v_in = 1;
 
-H = (gm*((alpha +1 )/(alpha))*Re)/(1+gm*((alpha+1)/(alpha))*Re)
-v_be = (v_in)/(1+Re*gm+Re*(gm/alpha));
+v_out = (Ro1Ro2_par*gm*(2+Afe1Afe2_par^-1)/((Ro1Ro2_par*gm*(2+Afe1Afe2_par^-1)+1);
+
+H = v_out/v_in;
+
 i_in = v_in/Rb1Rb2_par + v_be/(alpha/gm);
 
 
