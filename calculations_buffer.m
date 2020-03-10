@@ -4,11 +4,11 @@ clc;
 
 %% parameters SSEC
 Vcc = 10; %[volt]
-Rb1 = 500e3; %[ohm]
-Rb2 = 100e3; %[ohm]
-Re = 1e3; %[ohm]
-Ic =0.961e-3; %[A] large signal
-alpha =380; %[unitless]
+Rb1 = 120e3; %[ohm]
+Rb2 = 120e3; %[ohm]
+Re = 4.1e3; %[ohm]
+Ic =1e-3; %[A] large signal
+alpha =110; %[unitless]
 
 
 %% Derived from large signal

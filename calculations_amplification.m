@@ -4,12 +4,12 @@ clc;
 
 %% parameters SSEC
 Vcc = 10; %[volt]
-Rb1 = 50.6e3; %[ohm]
+Rb1 = 47e3; %[ohm]
 Rb2 = 10e3; %[ohm]
 Re = 1e3; %[ohm]
 Rc = 5e3; %[ohm]
-Rx =100; %[ohm]
-Ic =0.961e-3; %[A] large signal
+Rx =200; %[ohm]
+Ic =1.06e-3; %[A] large signal
 alpha =380; %[unitless]
 
 
@@ -27,6 +27,7 @@ ReRx_par = (Re*Rx)/(Re+Rx); %[Ohm]
 v_in = 10; %[V]
 
 v_be = v_in*(1/(1+gm*((alpha+1)/(alpha))*ReRx_par));
+
 
 %% Revelent equations small signal\
 
